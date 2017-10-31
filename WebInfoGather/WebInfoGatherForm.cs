@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,12 +41,13 @@ namespace WebInfoGather
             items.Add(new { Text = "一年內", Value = "&tbs=qdr:y" });            
 
             this.ddlRange.DataSource = items;
-            this.ddlRange.SelectedIndex = 3;
+            this.ddlRange.SelectedIndex = 4;
         }
 
         private void cmdSearch_Click(object sender, EventArgs e)
         {
-            
+            setSearchButton(false);
+
             // 此程式碼取出搜尋結果中關鍵的網頁原始碼，有需要的請自行對結果做字串處理 
             // 1. 將關鍵字送到Google做搜尋，取得搜尋結果網頁的原始碼 
             string url = @"https://www.google.com.tw/search?q=" + this.txtKeyword.Text + ddlRange.SelectedValue; // +"site:www.ptt.cc/bbs/&source=lnt&tbs=qdr:w";
@@ -80,7 +81,7 @@ namespace WebInfoGather
                 i++;
             }
             this.webView.DocumentText = myWebViewString;
-            
+            setSearchButton(true);
         }
 
         private void lblKey1_Click(object sender, EventArgs e)
@@ -204,8 +205,19 @@ namespace WebInfoGather
             this.txtKeyword.Text = this.lblKey8.Text + " " + this.txtKeyword.Text;
         }
 
+        private void setSearchButton(bool isEnabled){
+            cmdSearch.Enabled = isEnabled;
+            cmdSmart.Enabled = isEnabled;
+        }
+
         private void cmdSmart_Click(object sender, EventArgs e)
         {
+            int itemGrade = 5;
+            progressBarSmart.Value = 0;            
+            progressBarSmart.Maximum = 100;//ProgressBar上限
+            progressBarSmart.Minimum = 0;//ProgressBar下限
+            setSearchButton(false);
+            
             FileStream fileStream = new FileStream("WebInfoKey.txt", FileMode.Open);
             using (StreamReader reader = new StreamReader(fileStream))
             {
@@ -215,13 +227,20 @@ namespace WebInfoGather
 
                 while ((line = reader.ReadLine()) != null)
                 {
+                    if (progressBarSmart.Value + itemGrade < progressBarSmart.Maximum)
+                    {
+                        progressBarSmart.Value = progressBarSmart.Value + itemGrade;
+                    }
+
                     if (line.Trim() != "")
                     {
                         string[] strs = line.Split(':');
-                        SearchKeyword(strs[0], int.Parse(strs[1]));
-                        Thread.Sleep(800 + DateTime.Now.Millisecond);
+                        SearchKeyword(strs[0].ToLower(), int.Parse(strs[1]));
+                        Thread.Sleep(1500 + DateTime.Now.Millisecond);
                     }
+                    
                 }
+                
             }
 
                 #region 根據權重，重新 Sorting
@@ -242,6 +261,8 @@ namespace WebInfoGather
                 #endregion
 
                 #endregion
+                progressBarSmart.Value = 100;
+                setSearchButton(true);
             
         }
 
