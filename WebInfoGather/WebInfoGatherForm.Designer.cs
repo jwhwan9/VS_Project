@@ -1,4 +1,4 @@
-﻿namespace WebInfoGather
+namespace WebInfoGather
 {
     partial class WebInfoGatherForm
     {
@@ -59,11 +59,12 @@
             this.lblKey8 = new System.Windows.Forms.Label();
             this.cmdSmart = new System.Windows.Forms.Button();
             this.txtUrl = new System.Windows.Forms.TextBox();
+            this.progressBarSmart = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // cmdSearch
             // 
-            this.cmdSearch.Location = new System.Drawing.Point(533, 27);
+            this.cmdSearch.Location = new System.Drawing.Point(533, 38);
             this.cmdSearch.Name = "cmdSearch";
             this.cmdSearch.Size = new System.Drawing.Size(59, 23);
             this.cmdSearch.TabIndex = 0;
@@ -73,7 +74,7 @@
             // 
             // txtKeyword
             // 
-            this.txtKeyword.Location = new System.Drawing.Point(21, 27);
+            this.txtKeyword.Location = new System.Drawing.Point(21, 38);
             this.txtKeyword.Name = "txtKeyword";
             this.txtKeyword.Size = new System.Drawing.Size(432, 22);
             this.txtKeyword.TabIndex = 1;
@@ -98,7 +99,7 @@
             // ddlRange
             // 
             this.ddlRange.FormattingEnabled = true;
-            this.ddlRange.Location = new System.Drawing.Point(459, 28);
+            this.ddlRange.Location = new System.Drawing.Point(459, 39);
             this.ddlRange.Name = "ddlRange";
             this.ddlRange.Size = new System.Drawing.Size(68, 20);
             this.ddlRange.TabIndex = 4;
@@ -107,7 +108,7 @@
             // 
             this.lblKey1.AutoSize = true;
             this.lblKey1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey1.Location = new System.Drawing.Point(282, 52);
+            this.lblKey1.Location = new System.Drawing.Point(282, 70);
             this.lblKey1.Name = "lblKey1";
             this.lblKey1.Size = new System.Drawing.Size(29, 12);
             this.lblKey1.TabIndex = 5;
@@ -118,7 +119,7 @@
             // 
             this.lblKey2.AutoSize = true;
             this.lblKey2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey2.Location = new System.Drawing.Point(317, 52);
+            this.lblKey2.Location = new System.Drawing.Point(317, 70);
             this.lblKey2.Name = "lblKey2";
             this.lblKey2.Size = new System.Drawing.Size(29, 12);
             this.lblKey2.TabIndex = 6;
@@ -129,7 +130,7 @@
             // 
             this.lblKey21.AutoSize = true;
             this.lblKey21.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey21.Location = new System.Drawing.Point(282, 74);
+            this.lblKey21.Location = new System.Drawing.Point(282, 92);
             this.lblKey21.Name = "lblKey21";
             this.lblKey21.Size = new System.Drawing.Size(29, 12);
             this.lblKey21.TabIndex = 7;
@@ -140,7 +141,7 @@
             // 
             this.lblKey22.AutoSize = true;
             this.lblKey22.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey22.Location = new System.Drawing.Point(317, 74);
+            this.lblKey22.Location = new System.Drawing.Point(317, 92);
             this.lblKey22.Name = "lblKey22";
             this.lblKey22.Size = new System.Drawing.Size(29, 12);
             this.lblKey22.TabIndex = 8;
@@ -151,7 +152,7 @@
             // 
             this.lblKey23.AutoSize = true;
             this.lblKey23.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey23.Location = new System.Drawing.Point(352, 74);
+            this.lblKey23.Location = new System.Drawing.Point(352, 92);
             this.lblKey23.Name = "lblKey23";
             this.lblKey23.Size = new System.Drawing.Size(29, 12);
             this.lblKey23.TabIndex = 9;
@@ -162,7 +163,7 @@
             // 
             this.lblKey24.AutoSize = true;
             this.lblKey24.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey24.Location = new System.Drawing.Point(387, 74);
+            this.lblKey24.Location = new System.Drawing.Point(387, 92);
             this.lblKey24.Name = "lblKey24";
             this.lblKey24.Size = new System.Drawing.Size(29, 12);
             this.lblKey24.TabIndex = 10;
@@ -173,7 +174,7 @@
             // 
             this.lblKey25.AutoSize = true;
             this.lblKey25.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey25.Location = new System.Drawing.Point(422, 74);
+            this.lblKey25.Location = new System.Drawing.Point(422, 92);
             this.lblKey25.Name = "lblKey25";
             this.lblKey25.Size = new System.Drawing.Size(29, 12);
             this.lblKey25.TabIndex = 11;
@@ -184,7 +185,7 @@
             // 
             this.lblKey3.AutoSize = true;
             this.lblKey3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey3.Location = new System.Drawing.Point(352, 52);
+            this.lblKey3.Location = new System.Drawing.Point(352, 70);
             this.lblKey3.Name = "lblKey3";
             this.lblKey3.Size = new System.Drawing.Size(29, 12);
             this.lblKey3.TabIndex = 12;
@@ -195,7 +196,7 @@
             // 
             this.lblKey31.AutoSize = true;
             this.lblKey31.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey31.Location = new System.Drawing.Point(282, 94);
+            this.lblKey31.Location = new System.Drawing.Point(282, 112);
             this.lblKey31.Name = "lblKey31";
             this.lblKey31.Size = new System.Drawing.Size(29, 12);
             this.lblKey31.TabIndex = 13;
@@ -206,7 +207,7 @@
             // 
             this.lblKey32.AutoSize = true;
             this.lblKey32.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey32.Location = new System.Drawing.Point(317, 94);
+            this.lblKey32.Location = new System.Drawing.Point(317, 112);
             this.lblKey32.Name = "lblKey32";
             this.lblKey32.Size = new System.Drawing.Size(29, 12);
             this.lblKey32.TabIndex = 14;
@@ -217,7 +218,7 @@
             // 
             this.lblKey33.AutoSize = true;
             this.lblKey33.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey33.Location = new System.Drawing.Point(352, 94);
+            this.lblKey33.Location = new System.Drawing.Point(352, 112);
             this.lblKey33.Name = "lblKey33";
             this.lblKey33.Size = new System.Drawing.Size(29, 12);
             this.lblKey33.TabIndex = 15;
@@ -228,7 +229,7 @@
             // 
             this.lblKey34.AutoSize = true;
             this.lblKey34.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey34.Location = new System.Drawing.Point(387, 94);
+            this.lblKey34.Location = new System.Drawing.Point(387, 112);
             this.lblKey34.Name = "lblKey34";
             this.lblKey34.Size = new System.Drawing.Size(29, 12);
             this.lblKey34.TabIndex = 16;
@@ -239,7 +240,7 @@
             // 
             this.lblKey35.AutoSize = true;
             this.lblKey35.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey35.Location = new System.Drawing.Point(422, 94);
+            this.lblKey35.Location = new System.Drawing.Point(422, 112);
             this.lblKey35.Name = "lblKey35";
             this.lblKey35.Size = new System.Drawing.Size(29, 12);
             this.lblKey35.TabIndex = 17;
@@ -250,7 +251,7 @@
             // 
             this.lblKey36.AutoSize = true;
             this.lblKey36.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey36.Location = new System.Drawing.Point(457, 94);
+            this.lblKey36.Location = new System.Drawing.Point(457, 112);
             this.lblKey36.Name = "lblKey36";
             this.lblKey36.Size = new System.Drawing.Size(29, 12);
             this.lblKey36.TabIndex = 18;
@@ -261,7 +262,7 @@
             // 
             this.lblKey37.AutoSize = true;
             this.lblKey37.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey37.Location = new System.Drawing.Point(492, 94);
+            this.lblKey37.Location = new System.Drawing.Point(492, 112);
             this.lblKey37.Name = "lblKey37";
             this.lblKey37.Size = new System.Drawing.Size(29, 12);
             this.lblKey37.TabIndex = 19;
@@ -272,7 +273,7 @@
             // 
             this.lblKey38.AutoSize = true;
             this.lblKey38.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey38.Location = new System.Drawing.Point(527, 94);
+            this.lblKey38.Location = new System.Drawing.Point(527, 112);
             this.lblKey38.Name = "lblKey38";
             this.lblKey38.Size = new System.Drawing.Size(29, 12);
             this.lblKey38.TabIndex = 20;
@@ -283,7 +284,7 @@
             // 
             this.lblKey4.AutoSize = true;
             this.lblKey4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey4.Location = new System.Drawing.Point(387, 52);
+            this.lblKey4.Location = new System.Drawing.Point(387, 70);
             this.lblKey4.Name = "lblKey4";
             this.lblKey4.Size = new System.Drawing.Size(29, 12);
             this.lblKey4.TabIndex = 21;
@@ -294,7 +295,7 @@
             // 
             this.lblKey5.AutoSize = true;
             this.lblKey5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey5.Location = new System.Drawing.Point(422, 52);
+            this.lblKey5.Location = new System.Drawing.Point(422, 70);
             this.lblKey5.Name = "lblKey5";
             this.lblKey5.Size = new System.Drawing.Size(29, 12);
             this.lblKey5.TabIndex = 22;
@@ -305,7 +306,7 @@
             // 
             this.lblKey6.AutoSize = true;
             this.lblKey6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey6.Location = new System.Drawing.Point(457, 52);
+            this.lblKey6.Location = new System.Drawing.Point(457, 70);
             this.lblKey6.Name = "lblKey6";
             this.lblKey6.Size = new System.Drawing.Size(29, 12);
             this.lblKey6.TabIndex = 23;
@@ -316,7 +317,7 @@
             // 
             this.lblKey7.AutoSize = true;
             this.lblKey7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey7.Location = new System.Drawing.Point(492, 52);
+            this.lblKey7.Location = new System.Drawing.Point(492, 70);
             this.lblKey7.Name = "lblKey7";
             this.lblKey7.Size = new System.Drawing.Size(29, 12);
             this.lblKey7.TabIndex = 24;
@@ -327,7 +328,7 @@
             // 
             this.lblKey26.AutoSize = true;
             this.lblKey26.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey26.Location = new System.Drawing.Point(457, 74);
+            this.lblKey26.Location = new System.Drawing.Point(457, 92);
             this.lblKey26.Name = "lblKey26";
             this.lblKey26.Size = new System.Drawing.Size(29, 12);
             this.lblKey26.TabIndex = 25;
@@ -338,7 +339,7 @@
             // 
             this.lblKey27.AutoSize = true;
             this.lblKey27.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey27.Location = new System.Drawing.Point(492, 74);
+            this.lblKey27.Location = new System.Drawing.Point(492, 92);
             this.lblKey27.Name = "lblKey27";
             this.lblKey27.Size = new System.Drawing.Size(28, 12);
             this.lblKey27.TabIndex = 26;
@@ -349,7 +350,7 @@
             // 
             this.lblKey28.AutoSize = true;
             this.lblKey28.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey28.Location = new System.Drawing.Point(527, 74);
+            this.lblKey28.Location = new System.Drawing.Point(527, 92);
             this.lblKey28.Name = "lblKey28";
             this.lblKey28.Size = new System.Drawing.Size(41, 12);
             this.lblKey28.TabIndex = 27;
@@ -360,7 +361,7 @@
             // 
             this.lblKey8.AutoSize = true;
             this.lblKey8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblKey8.Location = new System.Drawing.Point(527, 51);
+            this.lblKey8.Location = new System.Drawing.Point(527, 69);
             this.lblKey8.Name = "lblKey8";
             this.lblKey8.Size = new System.Drawing.Size(65, 12);
             this.lblKey8.TabIndex = 28;
@@ -369,7 +370,7 @@
             // 
             // cmdSmart
             // 
-            this.cmdSmart.Location = new System.Drawing.Point(599, 27);
+            this.cmdSmart.Location = new System.Drawing.Point(599, 38);
             this.cmdSmart.Name = "cmdSmart";
             this.cmdSmart.Size = new System.Drawing.Size(62, 23);
             this.cmdSmart.TabIndex = 29;
@@ -384,11 +385,19 @@
             this.txtUrl.Size = new System.Drawing.Size(656, 22);
             this.txtUrl.TabIndex = 30;
             // 
+            // progressBarSmart
+            // 
+            this.progressBarSmart.Location = new System.Drawing.Point(533, 10);
+            this.progressBarSmart.Name = "progressBarSmart";
+            this.progressBarSmart.Size = new System.Drawing.Size(128, 23);
+            this.progressBarSmart.TabIndex = 31;
+            // 
             // WebInfoGatherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 518);
+            this.Controls.Add(this.progressBarSmart);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.cmdSmart);
             this.Controls.Add(this.lblKey8);
@@ -460,6 +469,7 @@
         private System.Windows.Forms.Label lblKey8;
         private System.Windows.Forms.Button cmdSmart;
         private System.Windows.Forms.TextBox txtUrl;
+        private System.Windows.Forms.ProgressBar progressBarSmart;
     }
 }
 
