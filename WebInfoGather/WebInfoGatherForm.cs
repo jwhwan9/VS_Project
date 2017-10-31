@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +19,7 @@ namespace WebInfoGather
     {
         Dictionary<string, int> dictWebInfoLink;
         Dictionary<string, string> dictWebInfo;
+        string homeResult = "";
 
         public WebInfoGatherForm()
         {
@@ -29,7 +30,7 @@ namespace WebInfoGather
         private void InitRange()
         {
 
-            this.webView.ScriptErrorsSuppressed = true;
+            this.webView.ScriptErrorsSuppressed = true;            
             this.ddlRange.DisplayMember = "Text";
             this.ddlRange.ValueMember = "Value";
             List<Object> items = new List<Object>();
@@ -81,6 +82,7 @@ namespace WebInfoGather
                 i++;
             }
             this.webView.DocumentText = myWebViewString;
+            homeResult = myWebViewString;
             setSearchButton(true);
         }
 
@@ -258,6 +260,7 @@ namespace WebInfoGather
                 }
                                 
                 this.webView.DocumentText = myWebViewString;
+                homeResult = myWebViewString;
                 #endregion
 
                 #endregion
@@ -335,6 +338,27 @@ namespace WebInfoGather
         private void webView_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             txtUrl.Text = webView.Url.AbsoluteUri;
+        }
+
+        private void cmdPrev_Click(object sender, EventArgs e)
+        {
+            if (webView.CanGoBack)
+            {
+                webView.GoBack();
+            }
+        }
+
+        private void cmdNext_Click(object sender, EventArgs e)
+        {
+            if (webView.CanGoForward)
+            {
+                webView.GoForward();
+            }
+        }
+
+        private void cmdHome_Click(object sender, EventArgs e)
+        {
+            webView.DocumentText = homeResult;
         }
         
     }

@@ -1,4 +1,4 @@
-namespace WebInfoGather
+﻿namespace WebInfoGather
 {
     partial class WebInfoGatherForm
     {
@@ -60,6 +60,9 @@ namespace WebInfoGather
             this.cmdSmart = new System.Windows.Forms.Button();
             this.txtUrl = new System.Windows.Forms.TextBox();
             this.progressBarSmart = new System.Windows.Forms.ProgressBar();
+            this.cmdPrev = new System.Windows.Forms.Button();
+            this.cmdNext = new System.Windows.Forms.Button();
+            this.cmdHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmdSearch
@@ -392,11 +395,44 @@ namespace WebInfoGather
             this.progressBarSmart.Size = new System.Drawing.Size(128, 23);
             this.progressBarSmart.TabIndex = 31;
             // 
+            // cmdPrev
+            // 
+            this.cmdPrev.Location = new System.Drawing.Point(21, 100);
+            this.cmdPrev.Name = "cmdPrev";
+            this.cmdPrev.Size = new System.Drawing.Size(35, 23);
+            this.cmdPrev.TabIndex = 32;
+            this.cmdPrev.Text = "<";
+            this.cmdPrev.UseVisualStyleBackColor = true;
+            this.cmdPrev.Click += new System.EventHandler(this.cmdPrev_Click);
+            // 
+            // cmdNext
+            // 
+            this.cmdNext.Location = new System.Drawing.Point(102, 100);
+            this.cmdNext.Name = "cmdNext";
+            this.cmdNext.Size = new System.Drawing.Size(35, 23);
+            this.cmdNext.TabIndex = 33;
+            this.cmdNext.Text = ">";
+            this.cmdNext.UseVisualStyleBackColor = true;
+            this.cmdNext.Click += new System.EventHandler(this.cmdNext_Click);
+            // 
+            // cmdHome
+            // 
+            this.cmdHome.Location = new System.Drawing.Point(62, 100);
+            this.cmdHome.Name = "cmdHome";
+            this.cmdHome.Size = new System.Drawing.Size(35, 23);
+            this.cmdHome.TabIndex = 34;
+            this.cmdHome.Text = "H";
+            this.cmdHome.UseVisualStyleBackColor = true;
+            this.cmdHome.Click += new System.EventHandler(this.cmdHome_Click);
+            // 
             // WebInfoGatherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 518);
+            this.Controls.Add(this.cmdHome);
+            this.Controls.Add(this.cmdNext);
+            this.Controls.Add(this.cmdPrev);
             this.Controls.Add(this.progressBarSmart);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.cmdSmart);
@@ -470,6 +506,9 @@ namespace WebInfoGather
         private System.Windows.Forms.Button cmdSmart;
         private System.Windows.Forms.TextBox txtUrl;
         private System.Windows.Forms.ProgressBar progressBarSmart;
+        private System.Windows.Forms.Button cmdPrev;
+        private System.Windows.Forms.Button cmdNext;
+        private System.Windows.Forms.Button cmdHome;
     }
 }
 
