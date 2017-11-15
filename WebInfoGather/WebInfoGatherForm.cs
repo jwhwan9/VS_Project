@@ -77,7 +77,7 @@ namespace WebInfoGather
 
                 myTarget = myText + System.Environment.NewLine + myURL;
                 this.txtResult.Text = this.txtResult.Text + myTarget + System.Environment.NewLine;
-
+                myURL = WebUtility.UrlDecode(myURL);
                 myWebViewString = myWebViewString + "<a href=\"" + myURL + "\">" + myText + "</a><br>"; // +matchesContent[i].Value.ToString() + "<br>";
                 i++;
             }
