@@ -75,9 +75,10 @@ namespace WebInfoGather
                 myKeyword2 = @"</a>";
                 string myText = myTarget.Substring(myTarget.IndexOf(myKeyword1) + myKeyword1.Length, myTarget.IndexOf(myKeyword2) - myKeyword1.Length);
 
+                myURL = WebUtility.UrlDecode(myURL);
                 myTarget = myText + System.Environment.NewLine + myURL;
                 this.txtResult.Text = this.txtResult.Text + myTarget + System.Environment.NewLine;
-                myURL = WebUtility.UrlDecode(myURL);
+                
                 myWebViewString = myWebViewString + "<a href=\"" + myURL + "\">" + myText + "</a><br>"; // +matchesContent[i].Value.ToString() + "<br>";
                 i++;
             }
@@ -290,7 +291,7 @@ namespace WebInfoGather
                 string myKeyword1 = "q=";
                 string myKeyword2 = "&amp;";
                 string myURL = myTarget.Substring(myTarget.IndexOf(myKeyword1) + myKeyword1.Length, myTarget.IndexOf(myKeyword2) - myKeyword1.Length);
-
+                myURL = WebUtility.UrlDecode(myURL);
                 myKeyword2 = "\">";
                 myTarget = myTarget.Substring(myTarget.IndexOf(myKeyword2));
                 myKeyword1 = "\">";
