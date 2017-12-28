@@ -1,0 +1,8 @@
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\bin\Debug\Google_Authenticator_TOTP.exe.config
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\obj\Debug\Google_Authenticator_TOTP.Properties.Resources.resources
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\obj\Debug\Google_Authenticator_TOTP.csproj.GenerateResource.Cache
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\bin\Debug\Google_Authenticator_TOTP.exe
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\bin\Debug\Google_Authenticator_TOTP.pdb
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\obj\Debug\Google_Authenticator_TOTP.exe
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\obj\Debug\Google_Authenticator_TOTP.pdb
+c:\users\4874\documents\visual studio 2012\Projects\Google_Authenticator_TOTP\obj\Debug\Google_Authenticator_TOTP.GoogleOTP.resources
